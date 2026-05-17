@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  /* Palette institutionnelle */
+  --color-primary: #1e3a8a;       /* Bleu profond — confiance, crédibilité */
+  --color-primary-dark: #0c1e3e;  /* Bleu nuit — sections sombres */
+  --color-accent: #15803d;        /* Vert — espoir, croissance */
+  --color-accent-light: #22c55e;
+  --color-gold: #ca8a04;          /* Or — générosité */
+  --color-cream: #fafaf7;         /* Crème — fond doux */
+
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-accent: var(--color-accent);
+  --color-accent-light: var(--color-accent-light);
+  --color-gold: var(--color-gold);
+  --color-cream: var(--color-cream);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sélection */
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Scrollbar discret */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
