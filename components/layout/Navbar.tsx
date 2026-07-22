@@ -10,6 +10,7 @@ const links = [
   { label: 'Accueil', href: '/' },
   { label: 'Nos Missions', href: '/nos-missions' },
   { label: 'À propos', href: '/a-propos' },
+  { label: 'Nos Projets', href: '/nos-projets' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -43,10 +44,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image
-              src="/logo.jpg"
+              src="/logo_2- png.png"
               alt="Fondation Fanta Sy"
-              width={2000}
-              height={1414}
+              width={411}
+              height={607}
               priority
               className="h-12 md:h-14 w-auto"
             />

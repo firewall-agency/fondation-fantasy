@@ -21,7 +21,7 @@ export default function HomePage() {
             sizes="100vw"
             className="object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0c1e3e]/95 via-[#1e3a8a]/85 to-[#0c1e3e]/95" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0c1e3e]/90 via-[#1e3a8a]/80 to-[#0c1e3e]/90" />
         </div>
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: 'radial-gradient(circle at 20% 30%, #15803d 0%, transparent 40%), radial-gradient(circle at 80% 70%, #ca8a04 0%, transparent 40%)',
@@ -93,7 +93,7 @@ export default function HomePage() {
               { value: 6, suffix: '', label: "Domaines d'intervention" },
               { value: 500, suffix: '+', label: 'Familles accompagnées' },
               { value: 100, suffix: '%', label: 'Bénévolat & engagement' },
-              { value: 2, suffix: ' ODD', label: 'Objectifs ONU alignés' },
+              { value: 3, suffix: ' ODD', label: 'Objectifs ONU alignés' },
             ].map((s, i) => (
               <motion.div
                 key={i}
@@ -215,7 +215,14 @@ export default function HomePage() {
             <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Aligné sur les</p>
             <h3 className="text-2xl md:text-3xl font-bold text-[#0c1e3e]">Objectifs de Développement Durable de l&apos;ONU</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center gap-5 p-6 rounded-2xl bg-white border border-slate-200">
+              <div className="w-16 h-16 rounded-xl bg-[#e5243b] flex items-center justify-center text-white font-black text-2xl shrink-0">01</div>
+              <div>
+                <div className="text-lg font-bold text-[#0c1e3e]">Pas de pauvreté</div>
+                <div className="text-sm text-slate-600">Éliminer la pauvreté sous toutes ses formes</div>
+              </div>
+            </div>
             <div className="flex items-center gap-5 p-6 rounded-2xl bg-white border border-slate-200">
               <div className="w-16 h-16 rounded-xl bg-[#dda63a] flex items-center justify-center text-white font-black text-2xl shrink-0">02</div>
               <div>

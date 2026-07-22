@@ -32,11 +32,10 @@ export const missions: Mission[] = [
     icon: '🤝',
     short: "Aider les veuves en précarité à retrouver confiance, dignité et stabilité économique.",
     description:
-      "Nous accompagnons les veuves en situation de vulnérabilité par un soutien financier, des formations professionnelles et un suivi psychologique pour leur permettre de redevenir autonomes.",
+      "Nous accompagnons les veuves en situation de vulnérabilité par un soutien financier et en nature.",
     actions: [
       "Soutien financier d'urgence",
-      "Formations professionnelles (couture, restauration, petit commerce…)",
-      "Microcrédit pour activités génératrices de revenus",
+      "Dons en nature (vivres, biens essentiels)",
       "Accompagnement psychologique",
     ],
     color: 'rose',

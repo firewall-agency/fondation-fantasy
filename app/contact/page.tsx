@@ -37,16 +37,22 @@ export default function ContactPage() {
     }
     setSending(true);
     try {
-      const res = await fetch('https://formsubmit.co/ajax/fondationfantasy@gmail.com', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          ...form,
-          _subject: `[Site] ${form.sujet} — ${form.nom}`,
-          _captcha: 'false',
+          access_key: '42e1a6c8-eea9-4cf8-8cde-085942a43746',
+          name: form.nom,
+          email: form.email,
+          telephone: form.telephone,
+          sujet: form.sujet,
+          message: form.message,
+          subject: `[Site] ${form.sujet} — ${form.nom}`,
+          from_name: 'Site Fondation Fanta Sy',
         }),
       });
-      if (res.ok) setSent(true);
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success) setSent(true);
       else setError("L'envoi a échoué. Réessayez ou écrivez-nous directement par email.");
     } catch {
       setError("L'envoi a échoué. Vérifiez votre connexion.");
@@ -93,7 +99,7 @@ export default function ContactPage() {
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                 }
                 title="Notre adresse"
-                lines={['II Plateau, près SODECI', 'Carrefour mendiant', 'Abidjan, Côte d\'Ivoire']}
+                lines={['Cocody 2 plateaux', 'derrière SOCOCE', 'Abidjan, Côte d\'Ivoire']}
               />
               <ContactCard
                 icon={
@@ -108,8 +114,8 @@ export default function ContactPage() {
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 }
                 title="Email"
-                lines={['fondationfantasy@gmail.com']}
-                action={{ label: 'Écrire', href: 'mailto:fondationfantasy@gmail.com' }}
+                lines={['contact@fondationfantasy.org']}
+                action={{ label: 'Écrire', href: 'mailto:contact@fondationfantasy.org' }}
               />
               <a
                 href="https://wa.me/2250758030396"
